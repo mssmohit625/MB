@@ -1,0 +1,2 @@
+ID	version	l	language	Email	FirstName	LastName	NameoftheProject	ProjectleaderVCA	ProjectSummary	DeliveryDate	RequestedBatch	Requested_date	Requestfrom	Projectname
+1	1	9	9				ANZ STIP Optimisation review	Kathryn Strez & Ruwan Weerakoon	Carried out a comprehensive review of ANZ’s current STIP configuration and provided opportunities for setting changes.	10 September 2020	201	10-Sep-20	Kathryn Strez	Visa Engagement Survey

@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<head>
+<title>CleverCounter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script>
+		function goPython1(){
+            $.ajax({
+              url: "runpython1.php",
+             context: document.body
+            }).done(function() {
+             alert('Python Coded executed Successfully!!');
+			 alert('The Interim file has been generated and saved successfully!!');
+            });
+		}
+		
+		$(function(){
+		$('#btn3').click(function(){ 
+			if(!$('#iframe').length) {
+					$('#iframeHolder').html(' <iframe class="iframe1" src="https://app.powerbi.com/view?r=eyJrIjoiYzI4N2MwZDQtYWZmNy00ZWJkLTllNmEtYjFjZjg3ZDg2Mzk0IiwidCI6IjA0ODNhZTUxLWE2MjctNDY2ZS1hN2RkLWRlMmFjN2UxMjM4ZSIsImMiOjEwfQ%3D%3D"  frameborder="0" marginheight="0" marginwidth="0" width="700" height="350" scrolling="auto"> </iframe>');
+			}
+		});   
+		});
+			
+		function enableBtn1() {
+			 document.getElementById("btn1").disabled = false;
+		}
+		function enableBtn2() {
+			 document.getElementById("btn2").disabled = false;
+		}		
+		function enableBtn3() {
+			 document.getElementById("btn3").disabled = false;
+		}		
+		function enableBtn4() {
+			 document.getElementById("btn4").disabled = false;
+		}	
+		function alert1() {
+             alert('Data uploaded Successfully!!');;
+            }
+		function alert2() {
+             alert('Rule file downloaded Successfully!!');;
+            }
+
+</script>
+<style>
+h2{
+background-color: #E30047;
+  padding: 15px;
+  text-align: left;
+  font-size: 35px;
+  color: white;
+}
+button {
+  background-color: #E30047;
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 35px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 220px;
+  cursor:pointer;
+}
+.button1 {
+ top: 35%;
+  left: 10%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor:pointer;
+}
+.button2 {
+ top: 55%;
+  left: 10%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.button3 {
+ top: 75%;
+  left: 10%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button4 {
+ top: 35%;
+  left: 88%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button5 {
+ top: 55%;
+  left: 88%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button6 {
+ top: 75%;
+  left: 88%;
+  margin: 0;
+  position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.div1{
+ top: 55%;
+  left: 50%;
+  right : 15%;
+  bottom : 15%;  
+  margin: 1;
+  position: absolute;
+   padding: 10px;
+   border : 2.2px solid #D3D3D3;
+  width: 700px;
+  height : 350px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  //cursor:grab;
+  //display:none
+}
+
+#datafile1{
+ top: 41%;
+  left: 1.5%;
+  position: absolute;
+  //min-width: 150px;
+  width: 195px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+#datafile2{
+ top: 61%;
+  left: 81.5%;
+  position: absolute;
+  //min-width: 220px;
+  width: 195px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  border-radius: 10px;
+  z-index: 1;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 28%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+<h2>CleverCounter</h2>
+</head>
+<body>
+<div>
+<div class="button1" >
+ <button id="btn1" onclick="alert1(); enableBtn2();" disabled>UPLOAD DATA</button>
+ </div>
+ 
+ <div class="button2" >
+ <button id="btn2" onclick="goPython1(); enableBtn3();" disabled>EXECUTE</button>
+ </div>
+ 
+ <div class="button3" >
+ <button id="btn3" onclick="enableBtn4();" disabled>VISUALIZE</button>
+ </div>
+ </div>
+ 
+ <div class="button4" >
+ <a href=""C:\Users\amit.kalra2\Desktop\Clever Counter\rules_output.csv""><button id="btn4" onclick="setTimeout(alert2,3000);" disabled>GET RULES</button></a>
+ </div>
+ </div>
+ 
+ <div class="button5" >
+<!--<button id="btn5" >Legend's Name</button>
+<p><a href="#" id="btn5"><nobr>Legend's Actual Name</nobr></a></p>-->
+
+<!--<nobr>
+<details id="myDetails">
+  <summary>Legend's Actual Name</summary>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: "Calibri";
+}
+th, td {
+  padding: 3px;
+  font-size: 13px;
+  font-family: "Calibri";
+}
+th {
+  text-align: left;
+  background-color: #e0e0d1;
+  font-size: 14px;
+  font-family: "Calibri";
+}
+</style>
+</head>
+<body>
+<table style="width:60%">
+  <tr>
+    <th>Actual Name</th>
+    <th>Legend</th> 
+   </tr>
+  <tr>
+    <td>Core Equity Fund - Class R</td>
+    <td>R1</td>
+
+  </tr>
+  <tr>
+    <td>Croci equity dividend fund - Class A</td>
+    <td>A1</td>
+  </tr>
+  <tr>
+    <td>California tax free income fund - Class S</td>
+    <td>S1</td>
+  </tr>
+    <tr>
+    <td>Califronia Tax Free Income Fund - Class C</td>
+    <td>C1</td>
+  </tr>
+    <tr>
+    <td>Capital Growth Fund - Class C</td>
+    <td>C2</td>
+  </tr>
+    <tr>
+    <td>California tax free income fund - Class S</td>
+    <td>S2</td>
+  </tr>
+    <tr>
+    <td>Califronia Tax Free Income Fund - Class C</td>
+    <td>C3</td>
+  </tr>
+</table>
+
+</body>
+</html>
+</details></nobr>-->
+
+<script>
+function myFunction() {
+  document.getElementById("myDetails").open = true;
+}
+</script>
+ </div>
+ 
+ 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="https://author.euro.confirmit.com/isa/OHHHIOADCRNXNRLHAMFAJFIXCYGMLMJO/test_MS/Rules.JPG">
+	
+	
+  </div>
+
+</div>
+
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("btn5");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+ 
+ <!--<div class="button6" >
+ <button id="btn6">SCORE DATA</button>
+ </div>-->
+ 
+ <div class="div1" id="iframeHolder"></div>
+ 
+ <form>
+ 
+ <!--<div class="col-sm-6" style="padding-top: 5px;">-->
+<div id="datafile1">
+	<label for="file-upload" class="custom-file-upload" >
+    <i class="fa fa-cloud-upload"></i>
+    </label>
+    <input type="file" id="file" onchange="load_file();" accept=".xlsx,.xls,image/*,.doc, .docx,.ppt, .pptx,.txt,.pdf" autocomplete="off" onclick="enableBtn1()" />
+ </div>
+ <!--<select name="dropdown1" id="datafile1">
+  <option value="Datafile.xlsx">Datafile.xlsx</option>
+</select>
+<div id="datafile2">
+	<label for="file-upload" class="custom-file-upload">
+    <i class="fa fa-cloud-upload"></i>
+    </label>
+    <input type="file" />
+ </div>-->
+
+<!--<select name="dropdown2" id="datafile2">
+  <option value="Sales Raw.xlsx">Sales Raw.xlsx</option>
+</select> -->
+</form>
+ 
+ </div>
+
+
+</body>
+</html>
